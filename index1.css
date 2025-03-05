@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: darkgreen;
+    padding: 10px;
+}
+.todoapp{
+    margin: 100px auto 20px; 
+    width: 100%;
+    max-width: 540px;
+    padding: 10px;
+    background-color: turquoise;
+    border-radius: 15px;
+    
+}
+.todoapp h2{
+    text-align: center;
+    color: darkgreen;
+    margin-bottom: 20px;
+}
+.todoapp img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+    margin-bottom: -5px;
+    margin-left: 10px;
+}
+.inputbox{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    background:rgb(241, 240, 240);
+    border-radius: 70px;
+    margin-bottom: 40px;
+    
+   
+}
+.inputbox #input{
+     flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    
+    
+}
+.inputbox button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: darkgreen;
+    color: white;
+    cursor: pointer;
+}
+
+ul li{
+    list-style: none;
+    margin: 5px 50px;
+    padding: 5px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;  /* Use flexbox */
+    justify-content: space-between;  /* Push delete icon to the right */
+    align-items: center;
+}
+ul li::before{
+    content: '';
+    background-image: url(Images/circle.jpg);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+   left: -20px;
+    background-position: center;
+    
+
+}
+ul li.checked{
+    text-decoration: line-through;
+    color: grey;
+}
+ul li.checked::before{
+    background-image: url(Images/checked.png);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    left: -20px;
+    background-position: center;
+}
+
